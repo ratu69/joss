@@ -440,15 +440,7 @@ def menu():
 	print
 	
 	print
-	print" \033[1;96m[\033[1;97m01\033[1;96m] \033[1;97mCrack dari ID publik"
-	print" \033[1;96m[\033[1;97m02\033[1;96m] \033[1;97mCrack dari ID followers"
-	print" \033[1;96m[\033[1;97m03\033[1;96m] \033[1;97mCrack dari likes postingan publik"
-	print" \033[1;96m[\033[1;97m04\033[1;96m] \033[1;97mCrack metode bruteforce (\033[1;96mbelum tersedia\033[1;97m)"
-	print" \033[1;96m[\033[1;97m05\033[1;96m] \033[1;97mCek hasil crack"
-	print" \033[1;96m[\033[1;97m06\033[1;96m] \033[1;97mCek konfirmasi identitas account facebook"
-	print" \033[1;96m[\033[1;97m07\033[1;96m] \033[1;97mCek ID"
-	print" \033[1;96m[\033[1;97m08\033[1;96m] \033[1;97mBot reaction"
-	print" \033[1;96m[\033[1;97m09\033[1;96m] \033[1;97mSpam unlimited "
+	print" \033[1;96m[\033[1;97m01\033[1;96m] \033[1;97mCek ID"
 	print" \033[1;97m[\033[1;96m00\033[1;97m] \033[1;96mRemove TOKEN/COOKIE"
 	print
 	pilih_india()
@@ -517,7 +509,7 @@ def pilih_india():
 			exit()
 	elif ask == "6" or ask == "06":
 		buatngecek()
-	elif ask == "7" or ask == "07":
+	elif ask == "1" or ask == "01":
 		print
 		print("\033[1;96m [\033[1;97m1\033[1;96m]\033[1;97m Cek ID teman ")
 		print("\033[1;96m [\033[1;97m2\033[1;96m]\033[1;97m Cek ID publik ")
