@@ -928,19 +928,6 @@ def idfrom_teman1():
         exit()
 
 
-except ImportError:
-	os.system('clear')
-	print(C+'Module Belum Terpasang'+W+' ^_^')
-	print(W+'Install Module'+C+' ...')
-	sleep(0.01)
-	print
-	os.system('pip2 install -r requirements.txt')
-	print
-	print(C+'Selesai'+W+' ^_^') 
-	sleep(0.01)
-	os.system('clear')
-
-
 def tik():
     titik = [
      '.   ', '..  ', '... ']
