@@ -939,6 +939,34 @@ def tik():
 HUT = '\x1b[1;34m'
 H = '\x1b[1;37m'
 
+def jalan(z):
+	for e in z + '\n':
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(0.001)
+		
+def logo():
+	time.sleep (0.01)
+	print
+	print
+ 	jalan ('\033[1;37m                    ______---_____ ')
+  	jalan ('\033[1;37m         ___-----           __      ----_ ')
+	jalan ('\033[1;37m ___---             ___------             \ ')
+	jalan ('\033[1;37m     ---______        ----                 \ ')
+	jalan ('\033[1;37m                 --__    |             _____) ')
+	jalan ('\033[1;37m                     -                /     \ ')
+	jalan ('\033[1;37m          _____-----    ___--         \    /)\ ')
+	jalan ('\033[1;37m    -----_____      ---____            \__/  / ')
+	jalan ('\033[1;37m                 --__    \ --    _          /\ ')
+	jalan ('\033[1;37m                      --__-__     \_____/   \_/\ ')
+	jalan ('\033[1;37m                            ----|   /          | ')
+	jalan ('\033[1;31mAuthor \033[1;37m : YAYAN-XD              |  |___________| ')
+	jalan ('\033[1;32mAdmin  \033[1;37m : JESSICA PUTRI         |  | ((_(_)| )_) ')
+	jalan ('\033[1;33mGroup\033[1;37m   : \033[1;37mRATU ERROR            \33[0;1m\033[1;37m|  \_((_(_)|/(_) ')
+	jalan ('\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\             ( ')
+	jalan ('\033[1;36m¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤\033[1;37m\_____________)')
+	print
+
 #------->login token jangan lupa masukin token facebook jangan token listrik kontol<-------#     
 			
 if __name__ == '__main__':
